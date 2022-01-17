@@ -28,9 +28,7 @@ int main()
         number/=10;
 
        
-        remainder = number % 10;
-        reverse = reverse * 10 + remainder;
-        number/=10;
+
 
     printf("The number is %u\n",reverse);
 
