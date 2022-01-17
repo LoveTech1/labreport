@@ -8,4 +8,5 @@ int main(){
     fahreneit = celsius * 9/5 + 32;
     printf("The temperature in fahreneit is: %f\n",fahreneit);
     return 0;
+    
 }

@@ -15,3 +15,4 @@ int main()
     printf("Sp = Cp so neither profit nor loss was made\n"); // condition to print if sp = cp
     return 0;
 }
+
