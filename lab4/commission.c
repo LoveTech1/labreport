@@ -1,31 +1,30 @@
-// wap to calculate the salesman commission on the basis of his daily sales
-
+// Online C compiler to run C program online
 #include <stdio.h>
-int main()
-{
-    float totalSales, com1,com2,com3,com4,sales ;
-    printf("HOw much salesman made on a day:\n");
-    scanf("%f",&sales);
-    if (sales < 5000)
-    {
-        com1 = (0.01 * sales);
-        printf("You get 1 pecent commision which is: %f",com1);
-    }
-    else if (sales < 8000 && sales >= 5000)
-    {
-        com2 = (0.03 * sales);
-        printf("you get 3 percent commsion which is: %f",com2);
 
-    }
-    else if(sales < 11000 && sales >= 8000)
+int main() {
+    // Write C code here
+    float commission,sales;
+    printf("Enter the amount of sales you made:\n");
+    scanf("%f",&sales);
+    if (sales > 11000)
     {
-        com3 = (0.05 * sales);
-        printf("You get 5 percent commission which is: %f",com3);
+        commission = sales * 0.1; // 10% if sales is greater than 11000
+        printf("%f is the commission amount, you got 10%% \n",commission);
     }
-    else 
+    else if ( sales>=8000 && sales<11000)
     {
-        com4 = (0.1 * sales);
-        printf("You get 10 percent commision which is : %f", com4);
+        // // 10% if sales is  than 11000 and greater than 8000
+        commission = sales * 0.05; 
+        printf("%f is the commission amount,you got 5%% \n",commission);
+    }
+    else if (sales>=5000 && sales<=8000)
+    {
+        commission = sales * 0.03;
+        printf("%f is the commission amount, you got 3%% \n",commission);
+    }
+    else{
+        commission = sales * 0.01;
+        printf("%f is the commission amount,you got 1%% \n",commission);
     }
     
     return 0;
