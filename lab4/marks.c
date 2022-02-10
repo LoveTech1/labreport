@@ -3,7 +3,7 @@
 # include <stdio.h>
 void main()
 {
-    float total, account, microprocessor, cProgramming, maths, english;
+    float total, account, microprocessor, cProgramming, maths, english,percentage;
     printf("Enter the marks in account:\n");
     scanf("%f",&account);
 
@@ -19,25 +19,26 @@ void main()
     printf("Enter the marks in english:\n");
     scanf("%f",&english);
 
-    total = (account + microprocessor + cProgramming + maths + english) / 5 ;
+    total = (account + microprocessor + cProgramming + maths + english);
 
     printf("The total marks is %f\n",total);
+    percentage = total / 5;
     
-    if (total >=80 && total <=100)
+    if (percentage >=80.00 && percentage <=100.0)
     {
-        printf("You got %f ,You got distinction\n",total);
+        printf("You got %f ,You got distinction\n",percentage);
     }
-    else if (total >=60 && total <=79)
+    else if (percentage >=60.00 && percentage <=79.00)
     {
-        printf("you got %f which is considered first division",total);
+        printf("you got %f which is considered first division\n",percentage);
     }
-    else if (total >=40 && total <= 60)
+    else if (percentage >=40.00 && percentage <= 60.00)
     {
-        printf("you got %f, You just passed consider working harder\n",total);
+        printf("you got %f, You just passed consider working harder\n",percentage);
     }
     else
     {
-        printf("you got %f, you failed",total);
+        printf("you got %f, you failed\n",percentage);
     }
 
 }
