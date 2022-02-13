@@ -7,7 +7,7 @@ int main(){
     printf("Enter the number of female in the class:\n");
     scanf("%f",&female);
     if (female!= 0){
-        ratio = (male / female)*100 ;
+        ratio = (male / female)* 100 ;
         printf("The ratio is %f\n",ratio);
     }
     else{

@@ -50,6 +50,14 @@ int main()
                 printf("The perimeter of the right angled triangle is %f",area);
             }
         }
+        else 
+        {
+            printf("Please enter the positive side of triangle:\n");
+        }
+
+    }
+    else {
+        printf("The given side doesn't make up a triangle\n");
     }
     return 0;
 }
