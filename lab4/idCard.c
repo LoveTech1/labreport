@@ -1,41 +1,38 @@
-// that displays the information in the form of id
-
 # include <stdio.h>
-void main()
+int main()
 {
-    char name[20];
-    int studentId[20];
-    int dob[20];
-    long int mobileNo[20];
-    char bloodGroup[20];
+    char name[20],bloodGroup[4];
+    int year,month,day;
+    char num[20];
+    /*
+    unsigned int rollno[20],mobileno[20];
+    char bloodGroup[5];
+    char dob[20];
+    */
 
-    printf("Enter the name:\n");
-    scanf("%s",name);
-    printf("The entered name is %s\n",name);
+    printf("Enter the student name:\n");
+    gets(name);
 
-    printf("Enter the student Id:\n");
-    scanf("%d",&studentId);
-    printf("The entered student is %d",studentId);
+    printf("Enter the year:\n");
+    scanf("%d",&year);
 
-    printf("Enter dob:\n");
-    scanf("%d",&dob);
-    printf("The dob is %d\n",dob);
+    printf("Enter the month:\n");
+    scanf("%d",&month);
 
-    printf("Enter mobileNo");
-    scanf("%lu",&mobileNo);
-    printf("The entered mobile no is %lu",mobileNo);
+    printf("Enter day:\n");
+    scanf("%d",&day);
 
-    printf("Enter the bloodGroup:\n");
+    printf("Enter the number:\n");
+    scanf("%s",&num);
+
+    printf("Enter the blood group:\n");
     scanf("%s",&bloodGroup);
-    printf("your blood group is %s\n",bloodGroup);
 
-
-    printf("Id card\n");
-    printf("|name :       %s........................|\n",name);
-    printf("|student Id:  %d........................|\n",studentId);
-    printf("|dob:         %d/.......................|\n",dob);
-    printf("|mobile no:   %lu.......................|\n",mobileNo);
-    printf("|blood group: %s........................|\n",bloodGroup);
-    
-    
+    printf("___________________________");
+    printf("|\t Asian College Of higher Studies\t");
+    printf("|name: %d                           \t",name);
+    printf("|");
+    printf("|");
+    printf("|");
+    return 0;
 }

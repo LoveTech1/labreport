@@ -16,15 +16,8 @@ int main()
     {
         if ((a && b && c)> 0) // this makes the side of triangle positive
         {
-            if (a == b || a == c )
-            {
-                printf("It is an isosceles triangle.\n");
-                area = (b*sqrt((4*a*a)-(b*b))) / 4 ;
-                perimeter = 2*a + b;
-                printf("The area of isosceles triangle is %f\n",area);
-                printf("The perimeter of isosceles triangle is %f\n",perimeter);
-            }
-            else if (a == b == c)
+            
+            if (a == b && b == c)
             {
                 printf("It is an equilateral triangle\n");
                 area = (sqrt(3) / 4) * a * a;
@@ -32,6 +25,15 @@ int main()
                 printf("The area of equilateral triangle is %f\n",area);
                 printf("The perimter of the equilateral triangle is %f",perimeter);
             }
+            else if (a == b || b == c || c == a )
+            {
+                printf("It is an isosceles triangle.\n");
+                area = (b*sqrt((4*a*a)-(b*b))) / 4 ;
+                perimeter = 2*a + b;
+                printf("The area of isosceles triangle is %f\n",area);
+                printf("The perimeter of isosceles triangle is %f\n",perimeter);
+            }
+            
             else if (a !=b && b!=c && c!=a)
             {
                 printf("It is scalane triangle\n");
@@ -46,8 +48,8 @@ int main()
                 printf("It is right angled triangle.\n");
                 perimeter = a + b + sqrt(a*a + b* b);
                 area = (a * b ) / 2;
-                printf("The area of the perimeter of the right angled triangle is %f",perimeter);
-                printf("The perimeter of the right angled triangle is %f",area);
+                printf("The area of the right angled triangle is %f\n",perimeter);
+                printf("The perimeter of the right angled triangle is %f\n",area);
             }
         }
         else 
