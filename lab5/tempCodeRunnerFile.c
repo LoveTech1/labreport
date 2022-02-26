@@ -1,0 +1,1 @@
+if(string[i] == '.' || string[i] == '?' || string[i] == '!')

@@ -16,7 +16,7 @@ int main()
         if(string[i] == '\t' || string[i] == ' ' || string[i] == '.' || string[i] == '\n')
         {
             words++;
-        }
+        }   
         if(string[i] == "\n")
         {
             line++;
