@@ -1,15 +1,24 @@
 // program that prints demonstrates the function
+
 # include <stdio.h>
-void main()
+int sub(int,int);
+int add(int,int);
+int main()
 {
-    int i,j;
-    for(i=1;i<=5;i++) // 2nd row                   // 1
-    {
-        for(j=1;j<=5;j++)    // 1 column  
-        {
-            printf("%d ",i); 
-        }
-        printf("\n");
-    }
-    
+    int a = 30,b= 2,subtraction,addition;
+    subtraction = sub(a,b);
+    addition = add(a,b);
+    printf("The sub is %d\n",subtraction);
+    printf("The addition between two numbers is %d\n",addition);
+    return 0;
+}
+
+int sub(int a, int b)
+{
+    return (a-b);
+}
+
+int add(int a, int b)
+{
+    return (a+b);
 }
