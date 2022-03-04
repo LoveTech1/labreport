@@ -4,22 +4,23 @@ void sum(void);
 void sub(void);
 void mult(void);
 void div(void);
-void input(void);
 int main()
 {
     int total,num1,num2;
     char ch;
-    printf("Enter the operator:\n");
+    printf("Enter + for addition:\n");
+    printf("Enter - for subtraction:\n");
+    printf("Enter * for multiplication:\n");
+    printf("Enter / for division:\n");
     scanf("%c",&ch);
+    printf("----------------------\n");
     switch(ch)
     {
         case '+':
             sum();
-            // printf("The sum of %d and %d is %d\n",num1,num2,(num1+num2));
             break;
 
         case '-':
-            input();
             sub();
             break;
 
@@ -33,23 +34,15 @@ int main()
     }
     return 0;
 }
-void input()
+
+
+void sum()
 {
     int num1,num2,addition;
     printf("enter the num1:\n");
     scanf("%d",&num1);
     printf("Enter the num2\n");
-    scanf("%d",&num2);     
-}
-
-void sum()
-{
-    int num1,num2,addition;
-    // printf("enter the num1:\n");
-    // scanf("%d",&num1);
-    // printf("Enter the num2\n");
-    // scanf("%d",&num2);
-    input();
+    scanf("%d",&num2);
     addition = num1 + num2;
     printf("The sum of %d and %d is %d\n",num1,num2,addition);
 }
@@ -62,7 +55,7 @@ void sub()
     printf("Enter the num2\n");
     scanf("%d",&num2);
     subtraction = num1 - num2;
-    printf("The sum of %d and %d is %d\n",num1,num2,subtraction);
+    printf("The subtraction of %d and %d is %d\n",num1,num2,subtraction);
 }
 
 void mult()
@@ -73,7 +66,7 @@ void mult()
     printf("Enter the num2\n");
     scanf("%d",&num2);
     multiplication = num1 * num2;
-    printf("The sum of %d and %d is %d\n",num1,num2,multiplication);
+    printf("The multiplication of %d and %d is %d\n",num1,num2,multiplication);
 }
 
 void div()
@@ -84,5 +77,5 @@ void div()
     printf("Enter the num2\n");
     scanf("%d",&num2);
     division = num1 / num2;
-    printf("The sum of %d and %d is %d\n",num1,num2,division);
+    printf("The division of %d and %d is %d\n",num1,num2,division);
 }
