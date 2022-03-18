@@ -1,5 +1,3 @@
-
-
 // arguement and return 
 
 //     AY       RY
@@ -28,17 +26,17 @@ int main()
             break;
 
         case '-':
-            pass2 = sub(5,5);
+            pass2 = sub(5,4);
             printf("The subtraction is %d\n",pass2);
             break;
 
         case '*':
-            pass3 = mult(6,7);
+            pass3 = mult(5,4);
             printf("The multiplication is %d\n",pass3);
             break;
         
         case '/':
-            pass4 = div(9,8);
+            pass4 = div(10,5);
             printf("The division is %d\n",pass4);
             break;
     }
@@ -51,18 +49,17 @@ int sum(int a, int b)
     return a + b;
 }
 
-int sub(int a , int b)
+int sub(int a,int b)
 {
-    
     return a - b;
 }
 
-int mult(int a, int b)
+int mult(int a,int b)
 {
     return a * b;
 }
 
-int div(int a ,int b)
+int div(int a, int b)
 {
     return a / b;
 }

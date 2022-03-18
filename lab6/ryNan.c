@@ -1,15 +1,13 @@
-
-
 // arguement and return 
 
 //     AY       RY
 //     AN       RN
 
 #include <stdio.h>
-int sum(int,int);
-int sub(int,int);
-int mult(int,int);
-int div(int,int);
+int sum();
+int sub();
+int mult();
+int div();
 int main()
 {
     int total,num1,num2,pass1,pass2,pass3,pass4;
@@ -23,22 +21,22 @@ int main()
     switch(ch)
     {
         case '+':
-            pass1 = sum(4,5);
+            pass1 = sum();
             printf("The addition is %d\n",pass1);
             break;
 
         case '-':
-            pass2 = sub(5,5);
+            pass2 = sub();
             printf("The subtraction is %d\n",pass2);
             break;
 
         case '*':
-            pass3 = mult(6,7);
+            pass3 = mult();
             printf("The multiplication is %d\n",pass3);
             break;
         
         case '/':
-            pass4 = div(9,8);
+            pass4 = div();
             printf("The division is %d\n",pass4);
             break;
     }
@@ -46,23 +44,26 @@ int main()
 }
 
 
-int sum(int a, int b)
+int sum()
 {
-    return a + b;
+    int add = 4 + 5;
+    return add;
 }
 
-int sub(int a , int b)
+int sub()
 {
-    
-    return a - b;
+    int subtract = 4 - 5;
+    return subtract;
 }
 
-int mult(int a, int b)
+int mult()
 {
-    return a * b;
+    int multiply = 5 * 4;
+    return multiply;
 }
 
-int div(int a ,int b)
+int div()
 {
-    return a / b;
+    int division = 10 / 5;
+    return division;
 }
