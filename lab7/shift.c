@@ -1,30 +1,48 @@
-# include <stdio.h>
-int main()
-{
-    int position,temp,i,num;
-    int arr[10];
-
-    printf("Enter the elements of the array:\n");
-    scanf("%d",&num);
-    for(i=0;i<num;i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-     // storing the first index value to a temporary variable
-    // printf("Enter the position in the array:\n");
-    // scanf("%d\n",&position);
-
-    temp = arr[0];
-    for(i=0;i<num;i++)
-    {
-        arr[i] = arr[1 + i];
-    }
-    arr[num-1] = temp;
-
-    printf("AFter shifiting the array:\n");
-    for(i=0;i<num;i++)
-    {
-        printf("%d\t",arr[i]);
-    }
+#include<stdio.h>  
+  
+#define N 3
+  
+int main()  
+{  
+    int a[N], i, temp, pos, dir;  
+  
+    printf("Enter %d integer numbers\n", N);  
+    for(i = 0; i < N; i++)  
+        scanf("%d", &a[i]);  
+  
+    printf("Enter the number of positions to shift\n");  
+    scanf("%d", &pos);  
+  
+    printf("Enter the direction of shifting ...\n");  
+    printf("LEFT: 1 and RIGHT: 0\n");  
+    scanf("%d", &dir);  
+  
+    while(pos)  
+    {  
+        if(dir)  
+        {  
+            temp = a[0];  
+            for(i = 0; i < N - 1; i++)  
+                a[i] = a[i + 1];  
+  
+            a[N - 1] = temp;  
+        }  
+        else  
+        {  
+            temp = a[N - 1];  
+            for(i = N - 1; i > 0; i--)  
+                a[i] = a[i - 1];  
+  
+            a[0] = temp;  
+        }  
+  
+        pos--;  
+    }  
+  
+    printf("Array after shift operation ...\n");  
+    for(i = 0; i < N; i++)  
+        printf("%d\n", a[i]);  
+  
+    printf("\n");  
     return 0;
 }

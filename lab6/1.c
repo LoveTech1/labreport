@@ -1,4 +1,6 @@
 
+// arguement no return no
+
 # include <stdio.h>
 void sum(void);
 void sub(void);

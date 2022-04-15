@@ -1,3 +1,5 @@
+// wap to calulate the power
+
 # include <stdio.h>
 int power(int a, int b);
 int main()

@@ -1,12 +1,11 @@
 
 
-float marks(int,int,int);
+float marks(float,float,float);
 
-float marks(int a, int b, int c)
+float marks(float a, float b, float c)
 {
-    int total = 300;
-    float average, percentage,per;
-    average =  (total) / 3;
-    percentage = ((a + b + c ) / total) * 100;
+    float total = 300;
+    float average;
+    average =  (total) / 3; 
     
 }

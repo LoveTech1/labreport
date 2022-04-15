@@ -1,68 +1,20 @@
-
-
-// arguement and return 
-
-//     AY       RY
-//     AN       RN
-
-#include <stdio.h>
-int sum(int,int);
-int sub(int,int);
-int mult(int,int);
-int div(int,int);
+#include<stdio.h>
+#include<math.h>
 int main()
 {
-    int total,num1,num2,pass1,pass2,pass3,pass4;
-    char ch;
-    printf("Enter + for addition:\n");
-    printf("Enter - for subtraction:\n");
-    printf("Enter * for multiplication:\n");
-    printf("Enter / for division:\n");
-    scanf("%c",&ch);
-    printf("----------------------\n");
-    switch(ch)
+    int x,i,val1,val2,count=0;
+    printf("Enter a number only positive integers:");
+    scanf("%d",&x);
+    val1=ceil(sqrt(x));
+    val2=x;
+    for ( i=2; i<=val1; i++ )
     {
-        case '+':
-            pass1 = sum(4,5);
-            printf("The addition is %d\n",pass1);
-            break;
-
-        case '-':
-            pass2 = sub(5,5);
-            printf("The subtraction is %d\n",pass2);
-            break;
-
-        case '*':
-            pass3 = mult(6,7);
-            printf("The multiplication is %d\n",pass3);
-            break;
-        
-        case '/':
-            pass4 = div(9,8);
-            printf("The division is %d\n",pass4);
-            break;
+        if ( val2%i==0 )
+        count =1;
     }
+    if ( count==0 && val2!=1 || val2==2 || val2==3 )
+    printf("%d is prime number",val2);
+    else 
+    printf("%d is not a prime number",val2);
     return 0;
-}
-
-
-int sum(int a, int b)
-{
-    return a + b;
-}
-
-int sub(int a , int b)
-{
-    
-    return a - b;
-}
-
-int mult(int a, int b)
-{
-    return a * b;
-}
-
-int div(int a ,int b)
-{
-    return a / b;
 }

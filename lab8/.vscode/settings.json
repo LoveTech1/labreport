@@ -26,9 +26,6 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "files.associations": {
-    "*.js": "javascript",
-    "marks1.h": "c"
-  }
+  ]
+  
 }
