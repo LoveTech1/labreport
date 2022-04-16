@@ -1,6 +1,5 @@
 // wap to ask the coordinate of center of the circle and radius from the user and draw a circle
 #include <graphics.h>
-#include <stdio.h>
 int main()
 {
     int gd = DETECT, gm;
@@ -12,8 +11,7 @@ int main()
     // scanf("%d %d",&xcor,&ycor);
     // printf("Enter the radius of the circle:\n");
     // scanf("%d",radius);
-    // gotoxy(xcor,ycor);
-    circle(250,100,50);  
-    delay(5000);
+    circle(400,200,100);  
+    getch();
     closegraph();
 }

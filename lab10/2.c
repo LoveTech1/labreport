@@ -5,7 +5,7 @@ int main()
     FILE *s,*d;
     // for opening the file
     s = fopen("source.txt","r");
-    d = fopen("destination.txt","a+");
+    d = fopen("destination.txt","w");
 
     if(s == NULL)
     {
