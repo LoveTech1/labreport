@@ -1,35 +1,39 @@
-// wap to read integers from the user until user choices "no" after reading data from the user , write 
-// all odd numbers in "odd.txt" and even numbers in "even.txt". 
+// wap to read integer from the user until user choices "no". After reading data from user, 
+// write all odd numbers in odd.txt and all even numbers in even.txt.
 
 # include <stdio.h>
 # include <string.h>
-# define CHOICE n
 int main()
 {
-    int num;
-    char choice[5];
-    int *even,*odd;
-    even = fopen("even.txt","w");
-    odd = fopen("odd.txt","w");
-    printf("enter a number:\n");
-    scanf("%d",&num);
-    if(num == 0)
+
+    FILE *even,*odd;
+    int number;
+    char user[4];
+    even = fopen("even.txt","a");
+    odd = fopen("odd.txt","a");
+    if(even || odd == NULL)
     {
-        printf("%d is even",num);
+        printf("Error in running the file\n");
     }
-    while(num!=0)
-    {
-        if(num%2 == 0)
+    do{  
+        printf("Enter the number:\n");
+        scanf("%d",&number);
+        if(number %2 == 0)
         {
-            fprintf("%d is even",num);
+            fprintf(even,"%d",number);
         }
         else
         {
-            fprintf("%d is odd\n",num);
+            fprintf(odd,"%d",number);
         }
+        printf("Do you want to continue?\n");
+        scanf("%s",user);
+    }while(strcmp(user,"no")!=0);
+    if(even != NULL & odd!=NULL)
+    {
+        printf("file closed successfully\n");
     }
     fclose(even);
     fclose(odd);
-
     return 0;
 }

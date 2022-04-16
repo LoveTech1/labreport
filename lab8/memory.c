@@ -6,19 +6,19 @@
 struct student
 {
     char student[20];
-    float mp,eng,c,math,acc;
-    float average;
+    float mp;
 };
 int main()
 {
     int *ptr,marks;
+    float average;
     int n, i,sum=0;
     ptr=&marks;
     // stud = (struct student *)malloc(sizeof(struct student));
     printf("How man0y students average do you want? ");
     scanf("%d", &n);
     ptr = malloc(sizeof(int)*n);
-    printf("Enter the marks of mp:\n");
+    // printf("Enter the marks of mp:\n");
     
     for (i = 0; i < n; i++)
     {
@@ -28,29 +28,11 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("Marks:%d:\n",*(ptr+i));
+        printf("Marks:%d ",*(ptr+i));
         sum+=*(ptr+i);
     }
-    
+    average = sum / 2;
+    printf("The average is %f\n",average);
     free(ptr);
-
-
-    
-    /*if (stud == NULL)
-    {
-        printf("Out of memory \n");
-    }
-    else
-    {
-        for (i = 0; i < n; i++)
-        {
-            printf("Enter student name:\n");
-            scanf("%s", stud->student);
-            printf("Enter the marks of mp:\n");
-            scanf("%f",&stud->mp);
-        }
-    }
-    //stud = (struct student *)malloc(sizeof(struct student));
-    */
 
 }

@@ -9,9 +9,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "/home/bibek/Desktop/labPrograms/lab10",
+      "cwd": "/home/bibek/Desktop/labPrograms/filehandling",
       "environment": [],
-      "program": "/home/bibek/Desktop/labPrograms/lab10/build/Debug/outDebug",
+      "program": "/home/bibek/Desktop/labPrograms/filehandling/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",
