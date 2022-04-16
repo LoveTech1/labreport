@@ -15,22 +15,15 @@ void display(struct mobile *);
 int main()
 {   struct mobile e,*p;
     p = &e;
-    // strcpy(p->brandname,"Nokia");
-    // strcpy(p->modelno,"1200");
-    // p->price=4500; 
-    // p->discount=0.05;
-    // printf("%s",m.brandname); 
-    // printf("\n%s",p->modelno);
-    // printf("\n%0.3f\n",p->price);
     display(&e);
     return 0;
 }
 
-void display(struct mobile *e)
+void display(struct mobile *q)
 {
-    struct mobile m, *p;
+    struct mobile m,n, *p;        
     p = &m;
-    strcpy(p->brandname,"Nokia");
+    strcpy(p->brandname,"Nokia");  
     strcpy(p->modelno,"1200");
     p->price=4500; 
     p->discount=0.05;
